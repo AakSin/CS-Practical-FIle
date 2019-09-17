@@ -8,6 +8,6 @@ def insertion_sort(data_list):
         else:
             data_list[ptr+1]=t
         print(data_list)
-a=["e","a","z","f"]
+a=[31,89,20,159,15]
 print(insertion_sort(a))
                         
