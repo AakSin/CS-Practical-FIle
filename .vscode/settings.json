@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Aakarsh\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
+    "python.pythonPath": "C:\\Users\\Aakarsh\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "code-runner.runInTerminal": true
 }
