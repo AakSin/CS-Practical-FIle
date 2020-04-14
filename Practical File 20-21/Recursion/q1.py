@@ -1,6 +1,11 @@
-def fib(n):
-    if n<3:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
-print(fib(5))
+def LenoirSearch(Arr1D, l, r, x): 
+    if r < l: 
+        return -1
+    if arr[l] == x: 
+        return l 
+    if arr[r] == x: 
+        return r 
+    return LenoirSearch(arr, l+1, r-1, x) 
+  
+arr=[2,7,1,9]
+print(LenoirSearch(arr, 0, len(arr)-1, 7) )
