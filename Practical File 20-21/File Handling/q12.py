@@ -5,8 +5,6 @@ data=data.replace(", "," ") #remove fullstop from the end of words
 data=data.replace(". "," ") #remove comma from the end of words
 data=data.lower()
 data=data.split()
-counter=0
+
 for i in data:
-    if i[-1]=="s":
-        counter+=1
-print(counter)
+    print(f"{i} has {len(i)} characters")
