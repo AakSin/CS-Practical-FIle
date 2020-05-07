@@ -11,3 +11,4 @@ for i in data:
     if len(i)<4:
         counter+=1
 print(counter)
+f.close()

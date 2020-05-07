@@ -9,3 +9,4 @@ for i in data:
                 counter+=1
             break #if the encounter alpha numeric counter is not t then we break the loop because we are looking for an alpha numeric character using the #j loop.
 print(counter)
+f.close()

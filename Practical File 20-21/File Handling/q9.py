@@ -8,3 +8,4 @@ for i in data:
     if i[0:3]=="the":
         counter+=1
 print(counter)
+f.close()

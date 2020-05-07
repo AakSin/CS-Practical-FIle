@@ -11,3 +11,4 @@ for i in data:
     if i.endswith("big"):
         counter+=1
 print(counter)
+f.close()

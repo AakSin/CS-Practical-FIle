@@ -10,3 +10,4 @@ for i in data:
     if i[-1]=="s":
         counter+=1
 print(counter)
+f.close()

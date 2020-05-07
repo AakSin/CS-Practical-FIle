@@ -16,3 +16,4 @@ for i in data:
                 vc+=1
     dict[i]=vc
 print(max(dict, key=dict.get))
+f.close()

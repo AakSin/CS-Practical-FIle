@@ -9,3 +9,4 @@ for i in data:
     if i.endswith("free"):
         counter+=1 
 print(counter)
+f.close()

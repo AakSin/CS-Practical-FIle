@@ -7,3 +7,4 @@ for i in data:
     if i[0]=="a":
         counter+=1
 print(counter)
+f.close()

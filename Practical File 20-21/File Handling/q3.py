@@ -15,3 +15,4 @@ for i in data:
 
 print(syc,spc,dc)
 
+f.close()

@@ -7,3 +7,4 @@ data=data.lower()
 data=data.split()
 
 print(max(data, key=len))
+f.close()

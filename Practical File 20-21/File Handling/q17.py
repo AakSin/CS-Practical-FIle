@@ -6,3 +6,4 @@ data=data.replace(". "," ") #remove comma from the end of words
 data="#".join(data.split())
 
 print(data)
+f.close()

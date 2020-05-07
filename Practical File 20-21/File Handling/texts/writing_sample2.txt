@@ -1,3 +1,4 @@
 Harry Potter Abc is priced at 200 rupees
 Harry Potter Xyz is priced at 100 rupees
-
+Dune is priced at 500 rupees
+1984 is priced at 300 rupees

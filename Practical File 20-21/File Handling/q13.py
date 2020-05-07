@@ -17,3 +17,4 @@ for i in data:
             else:
                 cc+=1
     print(f"{i} has {vc} vowels and {cc} consonants")
+    f.close()

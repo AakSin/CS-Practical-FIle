@@ -10,3 +10,4 @@ for i in data:
         uc+=1
 print("the number of lower case characters are:",lc)
 print("the number of upper case characters are:",uc)
+f.close()

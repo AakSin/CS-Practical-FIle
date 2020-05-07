@@ -3,3 +3,4 @@ data=f.read()
 data = "".join(data.split()) #done to remove spaces
 print(len(data))
 
+f.close()

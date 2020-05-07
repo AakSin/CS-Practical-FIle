@@ -13,3 +13,4 @@ for i in data:
 
 print(vc,cc)
 
+f.close()

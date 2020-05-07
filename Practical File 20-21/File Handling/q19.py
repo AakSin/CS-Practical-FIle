@@ -6,3 +6,4 @@ for i in data:
     if i.startswith("t"):
         counter+=1
 print(counter)
+f.close()

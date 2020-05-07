@@ -8,3 +8,4 @@ data=data.split()
 
 for i in data:
     print(f"{i} has {len(i)} characters")
+    f.close()

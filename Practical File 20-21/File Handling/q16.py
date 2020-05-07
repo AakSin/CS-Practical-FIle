@@ -7,3 +7,4 @@ data=data.lower()
 data=data.split()
 
 print(min(data, key=len))
+f.close()
