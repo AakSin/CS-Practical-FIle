@@ -59,7 +59,7 @@ while True:
             with open("Practical File 20-21\\Data Handling\\q2.dat","rb") as f:
                 with open("Practical File 20-21\\Data Handling\\q1.dat", "wb") as f1:
                     f1.truncate(0)
-                    for line in f:
+                     for line in f:
                         f1.write(line)
     if n==5:
         with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: #open binary file in read binary mode
@@ -70,7 +70,7 @@ while True:
                 while True:     # read records from binary file
                     read_rec=pickle.load(f)  #loading data from binary file
                     if (read_rec[0]==rec_search):   #compare rollno in file
-                        print("Record found, deleting this record")
+                        print("Record found, skipping this record")
                         continue
                     pickle.dump(read_rec,f1)
             except EOFError:
@@ -79,7 +79,7 @@ while True:
             with open("Practical File 20-21\\Data Handling\\q2.dat","rb") as f:
                 with open("Practical File 20-21\\Data Handling\\q1.dat", "wb") as f1:
                     f1.truncate(0)
-                    for line in f:
+                     for line in f:
                         f1.write(line)
     if n==6:
         break
