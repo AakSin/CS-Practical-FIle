@@ -8,68 +8,67 @@ print("6 - Exit to Quit the program")
     
 
 while True:
-    n=int(input())
+    n=int(input("Enter which option you would like: "))
     if n==1:
         with open("Practical File 20-21\\Data Handling\\q1.dat","ab") as f:
-            while True:     # input values from user
-                rollno=int(input("Enter Roll Number:"))
-                name=input("Enter Name:")
-                clas=int(input("Enter Class:"))
-                section=input("Enter Section:")
-                wri_rec=[rollno,name,clas,section]
-                pickle.dump(wri_rec,f)    #writing data to binary file
+            while True:     
+                code=input("Enter Item Code: ")
+                name=input("Enter Item Name: ")
+                price=int(input("Enter Item Price(integer): "))
+                quantity=int(input("Enter Item Quantity(integer): "))
+                wri_rec=[code,name,price,quantity]
+                pickle.dump(wri_rec,f)    
                 ch=input("Enter more record(y/n):")
                 if (ch=="n" or ch=="N"):
                     break
     if n==2:
         with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f:
-            try:    #Exception Handling for EOFError
-                while True:  # read records from binary file
-                    read_rec=pickle.load(f)  #loading data from binary file
+            try:    
+                while True:  
+                    read_rec=pickle.load(f)  
                     print(read_rec)
             except EOFError:        
                 print("all files read")
     if n==3:
-        with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: #open binary file in read binary mode
-            rec_search=int(input("Enter the roll no to be searched:"))
-            try:    #Exception Handling for EOFError
-                while True:     # read records from binary file
-                    read_rec=pickle.load(f)  #loading data from binary file
-                    if (read_rec[0]==rec_search):   #compare rollno in file
+        with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: 
+            rec_search=input("Enter the item code to be searched:")
+            try:    
+                while True:     
+                    read_rec=pickle.load(f)  
+                    if (read_rec[0]==rec_search):  
                         print("Record found")
                         print(read_rec)
                         break
             except EOFError:
                 print("Record not found")
     if n==4:
-         with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: #open binary file in read binary mode
-            rec_search=int(input("Enter the roll no to be searched:"))
+         with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: 
+            rec_search=input("Enter the item code to be searched:")
             f1=open("Practical File 20-21\\Data Handling\\q2.dat","wb")
-            f1.truncate(0)
-            try:    #Exception Handling for EOFError
-                while True:     # read records from binary file
-                    read_rec=pickle.load(f)  #loading data from binary file
-                    if (read_rec[0]==rec_search):   #compare rollno in file
-                        print("Record found")
-                        read_rec[1]=input("enter name ")
+            try:    
+                while True:     
+                    read_rec=pickle.load(f)  
+                    if (read_rec[0]==rec_search):  
+                        print("item found")
+                        read_rec[1]=input("enter item name ")
+                        read_rec[2]=int(input("enter item price "))
+                        read_rec[3]=int(input("enter item quantity "))
                     pickle.dump(read_rec,f1)
             except EOFError:
                 print("if no prompt appeared then the record was not found")
             f1.close()
             with open("Practical File 20-21\\Data Handling\\q2.dat","rb") as f:
                 with open("Practical File 20-21\\Data Handling\\q1.dat", "wb") as f1:
-                    f1.truncate(0)
                     for line in f:
                         f1.write(line)
     if n==5:
-        with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: #open binary file in read binary mode
-            rec_search=int(input("Enter the roll no to be searched:"))
+        with open("Practical File 20-21\\Data Handling\\q1.dat","rb") as f: 
+            rec_search=input("Enter the item code to be searched:")
             f1=open("Practical File 20-21\\Data Handling\\q2.dat","wb")
-            f1.truncate(0)
-            try:    #Exception Handling for EOFError
-                while True:     # read records from binary file
-                    read_rec=pickle.load(f)  #loading data from binary file
-                    if (read_rec[0]==rec_search):   #compare rollno in file
+            try:    
+                while True:    
+                    read_rec=pickle.load(f)  
+                    if (read_rec[0]==rec_search):   
                         print("Record found, deleting this record")
                         continue
                     pickle.dump(read_rec,f1)
@@ -78,7 +77,6 @@ while True:
             f1.close()
             with open("Practical File 20-21\\Data Handling\\q2.dat","rb") as f:
                 with open("Practical File 20-21\\Data Handling\\q1.dat", "wb") as f1:
-                    f1.truncate(0)
                     for line in f:
                         f1.write(line)
     if n==6:
